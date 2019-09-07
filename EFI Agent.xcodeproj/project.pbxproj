@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A26838621B351361002005A4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26838611B351361002005A4 /* MainMenu.xib */; };
+		A2991B691B34DBE700AC2B23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B681B34DBE700AC2B23 /* AppDelegate.m */; };
+		A2991B6B1B34DBE700AC2B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B6A1B34DBE700AC2B23 /* main.m */; };
+		A2991B6D1B34DBE700AC2B23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2991B6C1B34DBE700AC2B23 /* Images.xcassets */; };
+		A2991B871B34DC9100AC2B23 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B861B34DC9100AC2B23 /* StatusItemView.m */; };
+		A2991B911B34E60E00AC2B23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B8F1B34E60E00AC2B23 /* MainViewController.m */; };
+		E2A397E72246CF4200C6D2B1 /* BarTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A397E62246CE4C00C6D2B1 /* BarTableRowView.m */; };
+		E2A397EA2246E04000C6D2B1 /* DiskManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A397E92246E04000C6D2B1 /* DiskManagement.framework */; };
+		E2A787FE222B1D30002CA39A /* DiskUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A787FA222B1D2F002CA39A /* DiskUtilities.m */; };
+		E2A787FF222B1D30002CA39A /* Disk.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A787FB222B1D2F002CA39A /* Disk.m */; };
+		E2A78802222B1D62002CA39A /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A78801222B1D62002CA39A /* DiskArbitration.framework */; };
+		E2A78805222B1DBF002CA39A /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A78803222B1DBF002CA39A /* Authorization.m */; };
+		E2A7880D222B1E88002CA39A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A7880C222B1E88002CA39A /* Security.framework */; };
+		E2A78812222B204F002CA39A /* NVRAMXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A7880E222B204E002CA39A /* NVRAMXmlParser.m */; };
+		E2A78813222B204F002CA39A /* MiscTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A78811222B204E002CA39A /* MiscTools.m */; };
+		E2A78815222B2070002CA39A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A78814222B2070002CA39A /* AppKit.framework */; };
+		E2A78818222B2156002CA39A /* IORegTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A78817222B2156002CA39A /* IORegTools.m */; };
+		E2A7881A222B2A4A002CA39A /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A78819222B2A4A002CA39A /* MainView.xib */; };
+		E2A7881D222B3CAE002CA39A /* LaunchOnStartup.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A7881C222B3CAE002CA39A /* LaunchOnStartup.m */; };
+		E2A7AA362324433700D018B1 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = E2A7AA322324433700D018B1 /* utils.c */; };
+		E2A7AA372324433700D018B1 /* efidevp.c in Sources */ = {isa = PBXBuildFile; fileRef = E2A7AA352324433700D018B1 /* efidevp.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A26838611B351361002005A4 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		A2991B621B34DBE700AC2B23 /* EFI Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EFI Agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2991B661B34DBE700AC2B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2991B671B34DBE700AC2B23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2991B681B34DBE700AC2B23 /* AppDelegate.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2991B6A1B34DBE700AC2B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2991B6C1B34DBE700AC2B23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A2991B851B34DC9100AC2B23 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		A2991B861B34DC9100AC2B23 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		A2991B8E1B34E60E00AC2B23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A2991B8F1B34E60E00AC2B23 /* MainViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MainViewController.m; sourceTree = "<group>"; };
+		E2A397E52246CDE700C6D2B1 /* BarTableRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarTableRowView.h; sourceTree = "<group>"; };
+		E2A397E62246CE4C00C6D2B1 /* BarTableRowView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = BarTableRowView.m; sourceTree = "<group>"; };
+		E2A397E82246DD7A00C6D2B1 /* DMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManager.h; sourceTree = "<group>"; };
+		E2A397E92246E04000C6D2B1 /* DiskManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskManagement.framework; path = ../../../../../../../System/Library/PrivateFrameworks/DiskManagement.framework; sourceTree = "<group>"; };
+		E2A787FA222B1D2F002CA39A /* DiskUtilities.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = DiskUtilities.m; sourceTree = "<group>"; };
+		E2A787FB222B1D2F002CA39A /* Disk.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Disk.m; sourceTree = "<group>"; };
+		E2A787FC222B1D30002CA39A /* DiskUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskUtilities.h; sourceTree = "<group>"; };
+		E2A787FD222B1D30002CA39A /* Disk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Disk.h; sourceTree = "<group>"; };
+		E2A78801222B1D62002CA39A /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = System/Library/Frameworks/DiskArbitration.framework; sourceTree = SDKROOT; };
+		E2A78803222B1DBF002CA39A /* Authorization.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Authorization.m; sourceTree = "<group>"; };
+		E2A78804222B1DBF002CA39A /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
+		E2A7880C222B1E88002CA39A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E2A7880E222B204E002CA39A /* NVRAMXmlParser.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NVRAMXmlParser.m; sourceTree = "<group>"; };
+		E2A7880F222B204E002CA39A /* MiscTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscTools.h; sourceTree = "<group>"; };
+		E2A78810222B204E002CA39A /* NVRAMXmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVRAMXmlParser.h; sourceTree = "<group>"; };
+		E2A78811222B204E002CA39A /* MiscTools.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MiscTools.m; sourceTree = "<group>"; };
+		E2A78814222B2070002CA39A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E2A78816222B2156002CA39A /* IORegTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IORegTools.h; sourceTree = "<group>"; };
+		E2A78817222B2156002CA39A /* IORegTools.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = IORegTools.m; sourceTree = "<group>"; };
+		E2A78819222B2A4A002CA39A /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		E2A7881B222B3CAE002CA39A /* LaunchOnStartup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchOnStartup.h; sourceTree = "<group>"; };
+		E2A7881C222B3CAE002CA39A /* LaunchOnStartup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchOnStartup.m; sourceTree = "<group>"; };
+		E2A7AA322324433700D018B1 /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
+		E2A7AA332324433700D018B1 /* efidevp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = efidevp.h; sourceTree = "<group>"; };
+		E2A7AA342324433700D018B1 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		E2A7AA352324433700D018B1 /* efidevp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = efidevp.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2991B5F1B34DBE700AC2B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A397EA2246E04000C6D2B1 /* DiskManagement.framework in Frameworks */,
+				E2A78815222B2070002CA39A /* AppKit.framework in Frameworks */,
+				E2A7880D222B1E88002CA39A /* Security.framework in Frameworks */,
+				E2A78802222B1D62002CA39A /* DiskArbitration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2991B591B34DBE700AC2B23 = {
+			isa = PBXGroup;
+			children = (
+				E2A7AA312324430200D018B1 /* GfxUtil */,
+				A2991B641B34DBE700AC2B23 /* EFIAgent */,
+				E2A78800222B1D46002CA39A /* Frameworks */,
+				A2991B631B34DBE700AC2B23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2991B631B34DBE700AC2B23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2991B621B34DBE700AC2B23 /* EFI Agent.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2991B641B34DBE700AC2B23 /* EFIAgent */ = {
+			isa = PBXGroup;
+			children = (
+				A2991B671B34DBE700AC2B23 /* AppDelegate.h */,
+				A2991B681B34DBE700AC2B23 /* AppDelegate.m */,
+				E2A78804222B1DBF002CA39A /* Authorization.h */,
+				E2A78803222B1DBF002CA39A /* Authorization.m */,
+				E2A397E52246CDE700C6D2B1 /* BarTableRowView.h */,
+				E2A397E62246CE4C00C6D2B1 /* BarTableRowView.m */,
+				E2A787FD222B1D30002CA39A /* Disk.h */,
+				E2A787FB222B1D2F002CA39A /* Disk.m */,
+				E2A787FC222B1D30002CA39A /* DiskUtilities.h */,
+				E2A787FA222B1D2F002CA39A /* DiskUtilities.m */,
+				E2A397E82246DD7A00C6D2B1 /* DMManager.h */,
+				A2991B6C1B34DBE700AC2B23 /* Images.xcassets */,
+				E2A78816222B2156002CA39A /* IORegTools.h */,
+				E2A78817222B2156002CA39A /* IORegTools.m */,
+				E2A7881B222B3CAE002CA39A /* LaunchOnStartup.h */,
+				E2A7881C222B3CAE002CA39A /* LaunchOnStartup.m */,
+				A26838611B351361002005A4 /* MainMenu.xib */,
+				E2A78819222B2A4A002CA39A /* MainView.xib */,
+				A2991B8E1B34E60E00AC2B23 /* MainViewController.h */,
+				A2991B8F1B34E60E00AC2B23 /* MainViewController.m */,
+				E2A7880F222B204E002CA39A /* MiscTools.h */,
+				E2A78811222B204E002CA39A /* MiscTools.m */,
+				E2A78810222B204E002CA39A /* NVRAMXmlParser.h */,
+				E2A7880E222B204E002CA39A /* NVRAMXmlParser.m */,
+				A2991B851B34DC9100AC2B23 /* StatusItemView.h */,
+				A2991B861B34DC9100AC2B23 /* StatusItemView.m */,
+				A2991B651B34DBE700AC2B23 /* Supporting Files */,
+			);
+			path = EFIAgent;
+			sourceTree = "<group>";
+		};
+		A2991B651B34DBE700AC2B23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2991B661B34DBE700AC2B23 /* Info.plist */,
+				A2991B6A1B34DBE700AC2B23 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2A78800222B1D46002CA39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A397E92246E04000C6D2B1 /* DiskManagement.framework */,
+				E2A78814222B2070002CA39A /* AppKit.framework */,
+				E2A7880C222B1E88002CA39A /* Security.framework */,
+				E2A78801222B1D62002CA39A /* DiskArbitration.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2A7AA312324430200D018B1 /* GfxUtil */ = {
+			isa = PBXGroup;
+			children = (
+				E2A7AA352324433700D018B1 /* efidevp.c */,
+				E2A7AA332324433700D018B1 /* efidevp.h */,
+				E2A7AA322324433700D018B1 /* utils.c */,
+				E2A7AA342324433700D018B1 /* utils.h */,
+			);
+			path = GfxUtil;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2991B611B34DBE700AC2B23 /* EFI Agent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2991B7F1B34DBE700AC2B23 /* Build configuration list for PBXNativeTarget "EFI Agent" */;
+			buildPhases = (
+				A2991B5E1B34DBE700AC2B23 /* Sources */,
+				A2991B5F1B34DBE700AC2B23 /* Frameworks */,
+				A2991B601B34DBE700AC2B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EFI Agent";
+			productName = MenuBarTest;
+			productReference = A2991B621B34DBE700AC2B23 /* EFI Agent.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2991B5A1B34DBE700AC2B23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Fat Apps, LLC";
+				TargetAttributes = {
+					A2991B611B34DBE700AC2B23 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5LGHPJM9ZR;
+					};
+				};
+			};
+			buildConfigurationList = A2991B5D1B34DBE700AC2B23 /* Build configuration list for PBXProject "EFI Agent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2991B591B34DBE700AC2B23;
+			productRefGroup = A2991B631B34DBE700AC2B23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2991B611B34DBE700AC2B23 /* EFI Agent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2991B601B34DBE700AC2B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2991B6D1B34DBE700AC2B23 /* Images.xcassets in Resources */,
+				E2A7881A222B2A4A002CA39A /* MainView.xib in Resources */,
+				A26838621B351361002005A4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2991B5E1B34DBE700AC2B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A7AA362324433700D018B1 /* utils.c in Sources */,
+				A2991B871B34DC9100AC2B23 /* StatusItemView.m in Sources */,
+				E2A78813222B204F002CA39A /* MiscTools.m in Sources */,
+				A2991B6B1B34DBE700AC2B23 /* main.m in Sources */,
+				E2A7881D222B3CAE002CA39A /* LaunchOnStartup.m in Sources */,
+				E2A78805222B1DBF002CA39A /* Authorization.m in Sources */,
+				E2A78812222B204F002CA39A /* NVRAMXmlParser.m in Sources */,
+				E2A787FE222B1D30002CA39A /* DiskUtilities.m in Sources */,
+				A2991B691B34DBE700AC2B23 /* AppDelegate.m in Sources */,
+				E2A397E72246CF4200C6D2B1 /* BarTableRowView.m in Sources */,
+				E2A78818222B2156002CA39A /* IORegTools.m in Sources */,
+				E2A7AA372324433700D018B1 /* efidevp.c in Sources */,
+				A2991B911B34E60E00AC2B23 /* MainViewController.m in Sources */,
+				E2A787FF222B1D30002CA39A /* Disk.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A2991B7D1B34DBE700AC2B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A2991B7E1B34DBE700AC2B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A2991B801B34DBE700AC2B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5LGHPJM9ZR;
+				INFOPLIST_FILE = "$(SRCROOT)/EFIAgent/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Headsoft.EFIAgent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
+			};
+			name = Debug;
+		};
+		A2991B811B34DBE700AC2B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5LGHPJM9ZR;
+				INFOPLIST_FILE = "$(SRCROOT)/EFIAgent/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Headsoft.EFIAgent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2991B5D1B34DBE700AC2B23 /* Build configuration list for PBXProject "EFI Agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2991B7D1B34DBE700AC2B23 /* Debug */,
+				A2991B7E1B34DBE700AC2B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2991B7F1B34DBE700AC2B23 /* Build configuration list for PBXNativeTarget "EFI Agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2991B801B34DBE700AC2B23 /* Debug */,
+				A2991B811B34DBE700AC2B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2991B5A1B34DBE700AC2B23 /* Project object */;
+}
