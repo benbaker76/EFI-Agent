@@ -90,6 +90,7 @@ bool launchCommandAsAdmin(NSString *launchPath, NSArray *arguments, NSString **s
 	return (status == errAuthorizationSuccess);
 }
 
+// https://svn.ajdeveloppement.org/ajcommons/branches/1.1/c-src/MacOSXAuthProcess.c
 bool launchCommandAsAdmin(NSString *launchPath, NSArray *arguments, NSString **stdoutString, NSString **stderrString)
 {
 	OSStatus status;
