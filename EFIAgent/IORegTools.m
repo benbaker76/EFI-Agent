@@ -63,6 +63,37 @@ bool getIORegChild(io_service_t device, NSArray *nameArray, io_service_t *foundD
 	return getIORegChild(device, nameArray, foundDevice, &foundIndex, useClass, recursive);
 }
 
+bool getIORegParent(io_service_t device, NSString *name, io_service_t *foundDevice, bool recursive)
+{
+	kern_return_t kr;
+	io_iterator_t parentIterator;
+	
+	kr = IORegistryEntryGetParentIterator(device, kIOServicePlane, &parentIterator);
+	
+	if (kr != KERN_SUCCESS)
+		return false;
+	
+	for (io_service_t parentDevice; IOIteratorIsValid(parentIterator) && (parentDevice = IOIteratorNext(parentIterator)); IOObjectRelease(parentDevice))
+	{
+		if (IOObjectConformsTo(parentDevice, [name UTF8String]))
+		{
+			*foundDevice = parentDevice;
+			
+			IOObjectRelease(parentIterator);
+			
+			return true;
+		}
+		
+		if (recursive)
+		{
+			if (getIORegParent(parentDevice, name, foundDevice, recursive))
+				return true;
+		}
+	}
+	
+	return false;
+}
+
 bool getIORegParent(io_service_t device, NSArray *nameArray, io_service_t *foundDevice, uint32_t *foundIndex, bool useClass, bool recursive)
 {
 	kern_return_t kr;
@@ -189,9 +220,9 @@ bool getIORegUSBPropertyDictionaryArray(NSMutableArray **propertyDictionaryArray
 		
 		if (kr != KERN_SUCCESS)
 			continue;
-		
-		bool isHubPort = (CFStringCompare((__bridge CFStringRef)[NSString stringWithUTF8String:className], (__bridge CFStringRef)@"AppleUSB20HubPort", 0) == kCFCompareEqualTo);
-		bool isInternalHubPort = (CFStringCompare((__bridge CFStringRef)[NSString stringWithUTF8String:className], (__bridge CFStringRef)@"AppleUSB20InternalHubPort", 0) == kCFCompareEqualTo);
+
+		bool isHubPort = IOObjectConformsTo(device, "AppleUSBHubPort");
+		bool isInternalHubPort = IOObjectConformsTo(device, "AppleUSBInternalHubPort");
 		bool hubDeviceFound = false;
 		uint32_t hubLocationID = 0;
 		io_service_t hubDevice;
@@ -199,7 +230,7 @@ bool getIORegUSBPropertyDictionaryArray(NSMutableArray **propertyDictionaryArray
 		
 		if (isHubPort || isInternalHubPort)
 		{
-			if (getIORegParent(device, @[@"AppleUSB20InternalHub", @"AppleUSB20Hub"], &hubDevice, true, true))
+			if (getIORegParent(device, @"IOUSBDevice", &hubDevice, true))
 			{
 				kr = IORegistryEntryGetName(hubDevice, hubName);
 				
@@ -211,7 +242,7 @@ bool getIORegUSBPropertyDictionaryArray(NSMutableArray **propertyDictionaryArray
 					{
 						// HUB1: (locationID == 0x1D100000)
 						// HUB2: (locationID == 0x1A100000)
-						hubLocationID = [(__bridge NSNumber *)locationID intValue];
+						hubLocationID = [(__bridge NSNumber *)locationID unsignedIntValue];
 						
 						CFRelease(locationID);
 						
@@ -225,7 +256,7 @@ bool getIORegUSBPropertyDictionaryArray(NSMutableArray **propertyDictionaryArray
 		
 		io_service_t parentDevice;
 		
-		if (getIORegParent(device, @[@"IOPCIDevice"], &parentDevice, true, true))
+		if (getIORegParent(device, @"IOPCIDevice", &parentDevice, true))
 		{
 			io_name_t parentName {};
 			kr = IORegistryEntryGetName(parentDevice, parentName);
@@ -259,7 +290,7 @@ bool getIORegUSBPropertyDictionaryArray(NSMutableArray **propertyDictionaryArray
 						uint32_t vendorIDInt = getUInt32FromData(vendorID);
 						
 						[propertyDictionary setValue:[NSString stringWithUTF8String:parentName] forKey:@"UsbController"];
-						[propertyDictionary setValue:[NSNumber numberWithInt:vendorIDInt << 16 | deviceIDInt] forKey:@"UsbControllerID"];
+						[propertyDictionary setValue:[NSNumber numberWithInt:(deviceIDInt << 16) | vendorIDInt] forKey:@"UsbControllerID"];
 						
 						if (hubDeviceFound)
 						{
