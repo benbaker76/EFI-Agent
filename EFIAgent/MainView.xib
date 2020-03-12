@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -44,7 +44,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="square" title="Context Menu" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="wfh-YP-fak">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="menu"/>
+                                        <font key="font" metaFont="system"/>
                                         <menu key="menu" title="OtherViews" id="7FB-Jj-5oE">
                                             <items>
                                                 <menuItem title="Context Menu" image="NSActionTemplate" hidden="YES" id="hof-Mi-RZU">
@@ -80,9 +80,9 @@
                                         <rect key="frame" x="1" y="0.0" width="435" height="107"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="zpO-Gc-noS" viewBased="YES" id="2aw-Fn-TSl">
+                                            <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="zpO-Gc-noS" viewBased="YES" id="2aw-Fn-TSl">
                                                 <rect key="frame" x="0.0" y="48" width="435" height="82"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <tableViewGridLines key="gridStyleMask" vertical="YES"/>
@@ -90,7 +90,7 @@
                                                 <tableColumns>
                                                     <tableColumn identifier="Icon" editable="NO" width="24" minWidth="24" maxWidth="1000" id="kFE-OG-61c" userLabel="Icon">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -110,7 +110,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="DeviceName" width="100" minWidth="100" maxWidth="1000" id="ady-zi-iLR">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Device Name">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -143,7 +143,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="VolumeName" editable="NO" width="80" minWidth="80" maxWidth="1000" id="24U-Qo-NFv">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Volume Name">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                         </tableHeaderCell>
@@ -176,7 +176,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="BSDName" editable="NO" width="70" minWidth="70" maxWidth="1000" id="Sc3-Pn-6kr">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="BSD Name">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                         </tableHeaderCell>
@@ -209,7 +209,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="MountPoint" editable="NO" width="80" minWidth="80" maxWidth="1000" id="7f6-yx-ShT">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Mount Point">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -242,7 +242,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="Mount" editable="NO" width="24" minWidth="24" maxWidth="1000" id="crg-0m-eN3" userLabel="Mount">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -268,7 +268,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="Open" editable="NO" width="24" minWidth="24" maxWidth="1000" id="jtG-He-dLE">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -345,9 +345,9 @@
                                         <rect key="frame" x="1" y="0.0" width="435" height="553"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="LX0-RF-aQJ" viewBased="YES" id="F1r-1V-NDG">
+                                            <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="LX0-RF-aQJ" viewBased="YES" id="F1r-1V-NDG">
                                                 <rect key="frame" x="0.0" y="0.0" width="436" height="528"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <tableViewGridLines key="gridStyleMask" vertical="YES"/>
@@ -355,7 +355,7 @@
                                                 <tableColumns>
                                                     <tableColumn identifier="Icon" width="24" minWidth="24" maxWidth="1000" id="WAE-1C-JKz" userLabel="Icon">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -375,7 +375,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="VolumeName" editable="NO" width="120" minWidth="120" maxWidth="1000" id="lem-Uf-u5B">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Volume Name">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                         </tableHeaderCell>
@@ -408,7 +408,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="BSDName" editable="NO" width="70" minWidth="70" maxWidth="1000" id="KsW-Q6-zCW">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="BSD Name">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                         </tableHeaderCell>
@@ -441,7 +441,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="MountPoint" editable="NO" width="100" minWidth="100" maxWidth="1000" id="lR5-sE-Lej">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Mount Point">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -474,7 +474,7 @@
                                                     </tableColumn>
                                                     <tableColumn identifier="DiskType" editable="NO" width="107" minWidth="107" maxWidth="1000" id="tVf-6h-qqs">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Disk Type">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -590,6 +590,34 @@
                         </items>
                         <connections>
                             <outlet property="delegate" destination="-2" id="zmo-xh-kaB"/>
+                        </connections>
+                    </menu>
+                </menuItem>
+                <menuItem title="Copy to Clipboard" identifier="CopyToClipboard" id="Mud-mO-USN">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Copy to Clipboard" autoenablesItems="NO" identifier="CopyToClipboard" id="eDT-qW-n4Q">
+                        <items>
+                            <menuItem title="Volume UUID" identifier="VolumeUUID" id="kFH-Dv-P9Q">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="mountMenuClicked:" target="-2" id="avz-ie-e30"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Volume Path" identifier="VolumePath" id="sru-XG-ia2">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="mountMenuClicked:" target="-2" id="D6m-M8-sWy"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Media UUID" identifier="MediaUUID" id="Qz6-pn-8Hs" userLabel="Media UUID">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="mountMenuClicked:" target="-2" id="ezg-Wd-JwE"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="ji8-zs-BDf"/>
                         </connections>
                     </menu>
                 </menuItem>

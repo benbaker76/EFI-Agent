@@ -436,6 +436,27 @@ extern "C" {
 		if ([disk convertToAPFS:&stdoutString stderrString:&stderrString])
 			sendNotificationTitle(self, [NSString stringWithFormat:@"Convert to APFS (%@)", disk.mediaBSDName], trimNewLine(![stderrString isEqualToString:@""] ? stderrString : stdoutString), nil, nil, nil, NO);
 	}
+	else if ([menuItem.identifier isEqualToString:@"VolumeUUID"])
+	{
+		Disk *disk = _disksArray[row];
+		
+		[[NSPasteboard generalPasteboard] clearContents];
+		[[NSPasteboard generalPasteboard] setString:disk.volumeUUID forType:NSStringPboardType];
+	}
+	else if ([menuItem.identifier isEqualToString:@"VolumePath"])
+	{
+		Disk *disk = _disksArray[row];
+		
+		[[NSPasteboard generalPasteboard] clearContents];
+		[[NSPasteboard generalPasteboard] setString:(disk.volumePath != nil ? [disk.volumePath path] : @"") forType:NSStringPboardType];
+	}
+	else if ([menuItem.identifier isEqualToString:@"MediaUUID"])
+	{
+		Disk *disk = _disksArray[row];
+		
+		[[NSPasteboard generalPasteboard] clearContents];
+		[[NSPasteboard generalPasteboard] setString:disk.mediaUUID forType:NSStringPboardType];
+	}
 	else if ([menuItem.identifier isEqualToString:@"BootEFI"])
 	{
 		Disk *disk = _disksArray[row];
@@ -517,6 +538,8 @@ extern "C" {
 		return 5;
 	else if ([menu.identifier isEqualToString:@"Tools"])
 		return 2;
+	else if ([menu.identifier isEqualToString:@"CopyToClipboard"])
+		return 3;
 	
 	return 0;
 }
