@@ -17,10 +17,8 @@
 
 bool getIORegChild(io_service_t device, NSArray *nameArray, io_service_t *foundDevice, uint32_t *foundIndex, bool useClass, bool recursive)
 {
-	kern_return_t kr;
 	io_iterator_t childIterator;
-	
-	kr = IORegistryEntryGetChildIterator(device, kIOServicePlane, &childIterator);
+	kern_return_t kr = IORegistryEntryCreateIterator(device, kIOServicePlane, (recursive ? kIORegistryIterateRecursively : 0), &childIterator);
 	
 	if (kr != KERN_SUCCESS)
 		return false;
@@ -45,12 +43,6 @@ bool getIORegChild(io_service_t device, NSArray *nameArray, io_service_t *foundD
 				}
 			}
 		}
-		
-		if (recursive)
-		{
-			if (getIORegChild(childDevice, nameArray, foundDevice, foundIndex, useClass, recursive))
-				return true;
-		}
 	}
 	
 	return false;
@@ -65,10 +57,8 @@ bool getIORegChild(io_service_t device, NSArray *nameArray, io_service_t *foundD
 
 bool getIORegParent(io_service_t device, NSString *name, io_service_t *foundDevice, bool recursive)
 {
-	kern_return_t kr;
 	io_iterator_t parentIterator;
-	
-	kr = IORegistryEntryGetParentIterator(device, kIOServicePlane, &parentIterator);
+	kern_return_t kr = IORegistryEntryCreateIterator(device, kIOServicePlane, (recursive ? kIORegistryIterateRecursively : 0) | kIORegistryIterateParents, &parentIterator);
 	
 	if (kr != KERN_SUCCESS)
 		return false;
@@ -83,12 +73,6 @@ bool getIORegParent(io_service_t device, NSString *name, io_service_t *foundDevi
 			
 			return true;
 		}
-		
-		if (recursive)
-		{
-			if (getIORegParent(parentDevice, name, foundDevice, recursive))
-				return true;
-		}
 	}
 	
 	return false;
@@ -96,10 +80,8 @@ bool getIORegParent(io_service_t device, NSString *name, io_service_t *foundDevi
 
 bool getIORegParent(io_service_t device, NSArray *nameArray, io_service_t *foundDevice, uint32_t *foundIndex, bool useClass, bool recursive)
 {
-	kern_return_t kr;
 	io_iterator_t parentIterator;
-	
-	kr = IORegistryEntryGetParentIterator(device, kIOServicePlane, &parentIterator);
+	kern_return_t kr = IORegistryEntryCreateIterator(device, kIOServicePlane, (recursive ? kIORegistryIterateRecursively : 0) | kIORegistryIterateParents, &parentIterator);
 	
 	if (kr != KERN_SUCCESS)
 		return false;
@@ -123,12 +105,6 @@ bool getIORegParent(io_service_t device, NSArray *nameArray, io_service_t *found
 					return true;
 				}
 			}
-		}
-		
-		if (recursive)
-		{
-			if (getIORegParent(parentDevice, nameArray, foundDevice, foundIndex, useClass, recursive))
-				return true;
 		}
 	}
 	
