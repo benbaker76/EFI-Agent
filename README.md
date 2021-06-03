@@ -13,3 +13,5 @@ Simple, low resource, efficient and no frills tool to mount EFI partitions.
 * Percentage bars show space used on mounted partitions
 * Drag the position of the splitter to adjust the table views
 * Launch at Login option
+
+![Screenshot 1](https://github.com/headkaze/EFI-Agent/blob/master/EFIAgent01.png?raw=true)![Screenshot 2](https://github.com/headkaze/EFI-Agent/blob/master/EFIAgent02.png?raw=true)
