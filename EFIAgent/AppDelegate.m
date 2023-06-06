@@ -8,29 +8,25 @@
 
 
 #import "AppDelegate.h"
-#import "StatusItemView.h"
 
 @implementation AppDelegate
 
 - (void) applicationDidFinishLaunching:(NSNotification*)aNotification
 {
-	// Create the NSStatusItem.
-	CGFloat width = 24.0;
-	CGFloat height = [NSStatusBar systemStatusBar].thickness;
-	NSRect viewFrame = NSMakeRect(0, 0, width, height);
-	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-	StatusItemView *statusItemView = [[StatusItemView alloc] initWithFrame:viewFrame];
-	[self.statusItem setView:statusItemView];
-	NSImage *image = [NSImage imageNamed:@"IconStatusBar"];
-	[image setTemplate:YES];
-	[((StatusItemView *)self.statusItem.view) setImage:image];
-	
 	// Create our main view.
 	_mainView = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
 	
-	// Hook up status item to main view.
-	[statusItemView setTarget:_mainView];
-	[statusItemView setAction:@selector(toggleWindow:)];
+	NSStatusBar *systemStatusBar = [NSStatusBar systemStatusBar];
+	
+	// Create the NSStatusItem.
+	self.statusItem = [systemStatusBar statusItemWithLength:NSSquareStatusItemLength];
+
+	NSImage *image = [NSImage imageNamed:@"IconStatusBar"];
+	[image setTemplate:YES];
+	[image setSize:NSMakeSize(systemStatusBar.thickness, systemStatusBar.thickness)];
+	[self.statusItem setImage:image];
+	[self.statusItem setTarget:_mainView];
+	[self.statusItem setAction:@selector(toggleWindow:)];
 }
 
 - (void)dealloc

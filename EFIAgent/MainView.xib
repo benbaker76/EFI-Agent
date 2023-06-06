@@ -623,7 +623,7 @@
         </menu>
     </objects>
     <resources>
-        <image name="IconMount" width="128" height="128"/>
+        <image name="IconMount" width="28" height="28"/>
         <image name="IconOpen" width="128" height="128"/>
         <image name="NSActionTemplate" width="19" height="19"/>
     </resources>

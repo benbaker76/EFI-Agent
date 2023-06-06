@@ -11,7 +11,6 @@
 		A2991B691B34DBE700AC2B23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B681B34DBE700AC2B23 /* AppDelegate.m */; };
 		A2991B6B1B34DBE700AC2B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B6A1B34DBE700AC2B23 /* main.m */; };
 		A2991B6D1B34DBE700AC2B23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2991B6C1B34DBE700AC2B23 /* Images.xcassets */; };
-		A2991B871B34DC9100AC2B23 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B861B34DC9100AC2B23 /* StatusItemView.m */; };
 		A2991B911B34E60E00AC2B23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2991B8F1B34E60E00AC2B23 /* MainViewController.m */; };
 		E2A397E72246CF4200C6D2B1 /* BarTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A397E62246CE4C00C6D2B1 /* BarTableRowView.m */; };
 		E2A397EA2246E04000C6D2B1 /* DiskManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A397E92246E04000C6D2B1 /* DiskManagement.framework */; };
@@ -38,8 +37,6 @@
 		A2991B681B34DBE700AC2B23 /* AppDelegate.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AppDelegate.m; sourceTree = "<group>"; };
 		A2991B6A1B34DBE700AC2B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2991B6C1B34DBE700AC2B23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A2991B851B34DC9100AC2B23 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
-		A2991B861B34DC9100AC2B23 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
 		A2991B8E1B34E60E00AC2B23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A2991B8F1B34E60E00AC2B23 /* MainViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MainViewController.m; sourceTree = "<group>"; };
 		E2A397E52246CDE700C6D2B1 /* BarTableRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarTableRowView.h; sourceTree = "<group>"; };
@@ -130,8 +127,6 @@
 				E2A78811222B204E002CA39A /* MiscTools.m */,
 				E2A78810222B204E002CA39A /* NVRAMXmlParser.h */,
 				E2A7880E222B204E002CA39A /* NVRAMXmlParser.m */,
-				A2991B851B34DC9100AC2B23 /* StatusItemView.h */,
-				A2991B861B34DC9100AC2B23 /* StatusItemView.m */,
 				A2991B651B34DBE700AC2B23 /* Supporting Files */,
 			);
 			path = EFIAgent;
@@ -240,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A7AA362324433700D018B1 /* utils.c in Sources */,
-				A2991B871B34DC9100AC2B23 /* StatusItemView.m in Sources */,
 				E2A78813222B204F002CA39A /* MiscTools.m in Sources */,
 				A2991B6B1B34DBE700AC2B23 /* main.m in Sources */,
 				E2A7881D222B3CAE002CA39A /* LaunchOnStartup.m in Sources */,
@@ -367,13 +361,13 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0135;
+				CURRENT_PROJECT_VERSION = 0136;
 				DEVELOPMENT_TEAM = 5LGHPJM9ZR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/EFIAgent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.3.5;
+				MARKETING_VERSION = 1.3.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Headsoft.EFIAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
@@ -389,13 +383,13 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0135;
+				CURRENT_PROJECT_VERSION = 0136;
 				DEVELOPMENT_TEAM = 5LGHPJM9ZR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/EFIAgent/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.3.5;
+				MARKETING_VERSION = 1.3.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Headsoft.EFIAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited) $(SYSTEM_LIBRARY_DIR)/PrivateFrameworks";
